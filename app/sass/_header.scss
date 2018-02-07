@@ -1,0 +1,315 @@
+@import "_hamburgers.scss";
+
+
+.header {
+	position: relative;
+	padding-top: 40px;
+	overflow-x: hidden;
+	.container {
+		position: static;
+	}
+	.main-title {
+		text-align: center;
+	}
+	.subtitle {
+		text-align: center;
+		margin-top: 15px;
+	}
+}
+
+.main-slider {
+
+}
+.main-slider-item {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
+.line {
+	position: relative;
+	@include breakpoint("phablet") {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+.center-content {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	&_y {
+		top: 50%;
+		transform: translate(0, -50%);
+	}
+}
+.logo {
+	// flex-grow: 1;
+	// flex-shrink: 0;
+	display: inline-block;
+	text-decoration: none;
+	img {
+		display: block;
+	}
+}
+.contacts {
+	&_left {
+		text-align: left;
+		.contacts__item {
+			padding-left: 35px;
+			.wrapp-i {
+				left: 0;
+			}
+		}
+	}
+
+	&_right {
+		text-align: right;
+		.contacts__item {
+			padding-right: 35px;
+			.wrapp-i {
+				right: 0;
+			}
+		}
+	}
+
+	&__item {
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		color: #ffffff;
+		font-family: $font1;
+		font-size: 18px;
+		font-weight: 400;
+		&_phone {
+			font-size: 24px;
+			font-weight: 700;
+		}
+		b {
+			font-weight: 700;
+		}
+
+		i {
+			position: absolute;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+}
+.wrapp-i {
+	position: absolute;
+	top: 50%;
+	width: 24px;
+}
+.icon-place {
+}
+.icon-time {
+}
+.icon-phone {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-menu {
+	margin-top: 55px;
+	margin-bottom: 60px;
+	padding: 0 7px;
+	@include breakpoint("phablet") {
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	a {
+		text-decoration: none;
+		position: relative;
+		padding-bottom: 1px;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: #fff;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			transform: scaleX(0);
+			transition: transform .2s ease;
+		}
+		&:hover {
+			&:after {
+				transform: scaleX(1);
+			}
+		}
+	}
+	span {
+		text-shadow: 2px 3px 3px rgba(0, 0, 2, 0.8);
+		color: #ffffff;
+		font-family: $font1;
+		font-size: 14px;
+		font-weight: 400;
+	}
+}
+.icons-wr {
+	height: 40px;
+	position: relative;
+	i {
+		position: absolute;
+		margin: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+.icon-prod-1 {
+}
+.icon-prod-2 {
+}
+.icon-prod-3 {
+}
+.icon-prod-4 {
+}
+.icon-prod-5 {
+}
+.icon-prod-6 {
+}
+.icon-prod-7 {
+}
+.icon-prod-8 {
+}
+.icon-prod-9 {
+}
+.icon-prod-10 {
+}
+.icon-prod-11 {
+}
+.icon-prod-12 {
+}
+
+
+
+
+
+
+.main-title {
+	color: #ffffff;
+	font-family: $font1;
+	font-size: 72px;
+	font-weight: 700;
+}
+
+.subtitle {
+	color: #ffffff;
+	font-family: $font1;
+	font-size: 30px;
+	font-weight: 400;
+	strong {
+		font-weight: 700;
+	}
+}
+
+
+.bottom-line {
+	text-align: center;
+	&__highlight {
+		position: relative;
+		display: inline-block;
+		padding: 25px 60px;
+		text-align: center;
+		color: #ffffff;
+		font-family: $font1;
+		font-size: 24px;
+		font-weight: 700;
+		span {
+			position: relative;
+			z-index: 1;
+		}
+		&:before,
+		&:after  {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 100%;
+			background-color: #900d30;
+			top: 0;
+			z-index: 0;
+		}
+		&:before {
+			width: 60%;
+			left: 0;
+			transform: skew(-20deg);
+			border-radius: 30px 0px 0 0;
+		}
+		&:after {
+			width: 60%;
+			right: 0;
+			transform: skew(20deg);
+			border-radius: 0px 30px 0 0;
+		}
+	}
+}
+
+
+
+.dots {
+	margin: 90px 0 100px;
+	text-align: center;
+	li {
+		display: inline-block;
+		position: relative;
+		width: 16px;
+		height: 16px;
+		cursor: pointer;
+		margin: 0 3px;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			margin: auto;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+			border-radius: 50%;
+			background-color: #fff;
+		}
+		&.active {
+			&:after {
+				width: 80%;
+				height: 80%;
+			}
+		}
+	}
+}
