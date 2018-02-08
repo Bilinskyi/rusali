@@ -75,6 +75,20 @@
 
   $(document).ready(function(){
 
+    $('.select__selected').on('click', function(e) {
+     e.preventDefault(); 
+     $(this).parent().toggleClass('select_active');
+    });
+
+    $('.close-filter').on('click', function(e) {
+     e.preventDefault(); 
+     var filterBlock = $(this).parent();
+     filterBlock.addClass('filter_hide');
+     setTimeout(function() {
+      filterBlock.slideUp();
+     }, 300)
+    });
+
     // $('.js-hamburger').on('click', function(e) {
     //  e.preventDefault(); 
     //  $(this).toggleClass('is-active');

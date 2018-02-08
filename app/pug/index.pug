@@ -4,79 +4,39 @@ append config
 
 block main
 	include includes/header.pug
-	// begin section-1
-	section.section-1
-		.container
-			p.p.p_line.
-				Для мужчины одежда – это его визитная карточка. Чтобы выделяться из толпы, необходимо создать свой уникальный образ и впечатляющий внешний вид. Мужская одежда способна сделать мужчину успешным и уверенным, красивым и приятным в общении. Одежда – это показатель статуса, поэтому мужчине всегда следует выглядеть современно.   Строгая консервативная классика и свободная, комфортная одежда в стиле casual – таковы главные тенденции современной мужской моды.
-			h2.title магазин РУСАЛИ - это
-			.about-icons
-				.item-dsc
-					i.icon-1
-					span Широкий ассортимент<br>и наличие размеров
-				.item-dsc
-					i.icon-2
-					span Профессиональные <br>продавцы
-				.item-dsc
-					i.icon-3
-					span Высокий уровень <br>сервиса <br><em>- если товар не понравится или будет бракованный, в  течение 30 дней его можно обменять* (при сохранении целостного внешнего вида)</em>
-				.item-dsc
-					i.icon-4
-					span Обновление ассортимента <br>3 раза в месяц
-	// end section-1
-	// begin specialoffers
-	section.specialoffers
+	include includes/section-1.pug
+
+	// begin section-products
+	section.section-products
 		.container
 			.wrapp-title
-				.title: span Акции и спецпредложения
-			.offers-wrapp
-				+b.ofr-item
-					+e.IMG.img(src="../img/1.png")
-					+e.txt Программа лояльности <br>для постоянных клиентов <br><strong>Кешбек</strong> в виде бонусов
-				+b.ofr-item
-					+e.IMG.img(src="../img/2.png")
-					+e.txt При оформлении заказа <br>с сайта <strong>скидка -15%</strong>
-				+b.ofr-item
-					+e.IMG.img(src="../img/3.png")
-					+e.txt При заказе на <strong>5000 р.</strong> <br>доставка бесплатно
-				+b.ofr-item
-					+e.IMG.img(src="../img/4.png")
-					+e.txt  При покупке набора <br>Рубашка + Брюки + Акссесуар <br>дарим <strong>бесплатную стрижку</strong> <br>в Мужской парикхмахерской <br>Барбершоп «ОлдБой»
-	// end specialoffers
-	// begin section-contacts
-	section.section-contacts
-		.container
-			.line
-				.center-content
-					.title Магазины “РУСАЛИ”
-				+b.contacts_left
-					+e.item <span class="wrapp-i"><i class="icon-place-color"></i></span> Севастополь, ТРЦ «Муссон», 1 этаж
-					+e.item <span class="wrapp-i"><i class="icon-time-color"></i></span> Без выходных с <b>10:00 - 20:00</b>
-					+e.item_phone <span class="wrapp-i"><i class="icon-phone-color"></i></span> +79781076041
-					a.button.button_r(href="#") Заказать звонок
-				+b.UL.contacts_right
-					+e.item <span class="wrapp-i"><i class="icon-place-color"></i></span> Севастополь, ТРЦ «Меганом», 2 этаж
-					+e.item <span class="wrapp-i"><i class="icon-time-color"></i></span> Без выходных с <b>10:00 - 20:00</b>
-					+e.item_phone <span class="wrapp-i"><i class="icon-phone-color"></i></span> +79781076041
-					a.button.button_r(href="#") Заказать звонок
-			.store-wrapp
-				.store-wrapp-item
-					+b.images
-						+e.item
-							img(src="../img/image-shop.jpg", alt="")
-						+e.item
-							img(src="../img/image-shop.jpg", alt="")
-					.map
-						#map-canvas
-				.store-wrapp-item
-					+b.images
-						+e.item
-							img(src="../img/image-shop.jpg", alt="")
-						+e.item
-							img(src="../img/image-shop.jpg", alt="")
-					.map
-						#map-canvas2
-	// end section-contacts
+				.title.title_sm: span В нашем магазине Вы всегда можете подобрать вещь на свой вкус и кошелёк
+			h3 Рубашки
+			include includes/filter.pug
+			.products-wrapp
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+			h3 Зажимы
+			.products-wrapp
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+				+product('../img/product.jpg', 'Рубашка “Название”', '1000 р.')
+
+
+	// end section-products
+
+	include includes/specialoffers.pug
+	include includes/section-contacts.pug
+	
+
+
 	//- include includes/form.pug
 	include includes/footer.pug
 	//- include includes/modals.pug
