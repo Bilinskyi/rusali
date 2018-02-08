@@ -74,7 +74,7 @@
 		width: $md-container;
 	}
 	@include breakpoint("large") {
-		width: $lg-bp;
+		width: $lg-container;
 	}
 }
 

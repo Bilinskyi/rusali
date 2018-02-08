@@ -217,7 +217,7 @@ h3 {
 	@include breakpoint("phablet") {
 		display: flex;
 		align-items: center;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		justify-content: space-between;
 	}
 	&__item {
@@ -360,11 +360,45 @@ h3 {
 		opacity: 0;
 		transform: translate(-100%, 0%);
 	}
+	&>* {
+		@include breakpoint("maxmedium") {
+		      margin-bottom: 12px;
+		}
+	}
+}
+
+.filter-item {
+	@include breakpoint("maxlarge") {
+	      flex-grow: 1;
+	      text-align: center;
+	      margin-top: 10px;
+	}
+	@include breakpoint("maxmedium") {
+		text-align: right;
+	      margin-top: 0;
+	}
 }
 
 .close-filter {
 	display: inline-block;
 	margin-left: 10px;
+	width: 24px;
+	height: 24px;
+	@include breakpoint("maxlarge") {
+	      margin-left: 0;
+	      position: absolute;
+	      top: 100%;
+	      left: 0;
+	      right: 0;
+	      margin-left: auto;
+	      margin-right: auto;
+	      margin-top: 5px;
+	}
+	@include breakpoint("maxmedium") {
+	      margin-left: 10px;
+	      position: static;
+	      margin-top: 0;
+	}
 	i {
 		display: block;
 	}
@@ -470,7 +504,15 @@ h3 {
 		display: flex;
 		align-items: stretch;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: flex-start;
+	}
+	@include breakpoint("maxlarge") {
+	      margin-left: -10px;
+	      margin-right: -10px;
+	}
+	@include breakpoint("maxsmall") {
+	      margin-left: -15px;
+	      margin-right: -15px;
 	}
 }
 
@@ -485,6 +527,24 @@ h3 {
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: space-between;
+	}
+	@include breakpoint("maxlarge") {
+	      padding-left: 10px;
+	      padding-right: 10px;
+	}
+	@include breakpoint("maxmedium") {
+	      width: 33.33%;
+	}
+	@include breakpoint("maxsmall") {
+	      width: 50%;
+	      padding-left: 15px;
+	      padding-right: 15px;
+	}
+	@include breakpoint("mobileonly") {
+	      width: 300px;
+	      margin-left: auto;
+	      margin-right: auto;
+	      max-width: 100%;
 	}
 	.button {
 		display: block;
@@ -503,8 +563,7 @@ h3 {
 	background-color: #f8f8f8;
 	border: 1px solid #c8c8c8;
 	border-radius: 5px;
-	padding-top: 12px;
-	padding-bottom: 104px;
+	padding: 12px 10px 104px;
 
 	&__img-wr {
 
