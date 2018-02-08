@@ -45,7 +45,7 @@ p {
 	font-weight: 400;
 	line-height: 18px;
 	&_line {
-		padding: 19px 0 19px 28px;
+		padding: 15px 0 19px 30px;
 		position: relative;
 		&:after {
 			content: '';
@@ -61,15 +61,16 @@ p {
 }
 
 .section-1 {
-	padding: 58px 0 69px;
+	padding: 58px 0 67px;
 	.p {
 		margin-left: 55px;
 		margin-right: 85px;
 	}
 	.title {
 		text-align: center;
-		margin-top: 45px;
-		margin-bottom: 60px;
+		margin-top: 37px;
+		letter-spacing: .7px;
+		margin-bottom: 53px;
 	}
 }
 
@@ -97,7 +98,7 @@ h3 {
 	margin-left: -15px;
 	margin-right: -15px;
 	@include breakpoint("large") {
-		max-width: 80%;
+		max-width: 83%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -108,7 +109,7 @@ h3 {
 	float: left;
 	position: relative;
 	text-align: center;
-	padding-top: 85px;
+	padding-top: 84px;
 	padding-left: 15px;
 	padding-right: 15px;
 	i {
@@ -131,6 +132,8 @@ h3 {
 		font-family: $font1;
 		font-size: 14px;
 		font-weight: 400;
+		display: block;
+		line-height: 1.23;
 	}
 }
 
@@ -146,13 +149,13 @@ h3 {
 
 
 .section-contacts {
-	padding-top: 50px;
+	padding-top: 48px;
 	.contacts__item {
 		color: #000;
 	}
 	.center-content {
 		top: auto;
-		bottom: 53px;
+		bottom: 45px;
 	}
 }
 
@@ -246,6 +249,12 @@ h3 {
 	background: url(../img/offer.jpg) center top no-repeat;
 	background-size: cover;
 	padding-bottom: 90px;
+	.wrapp-title {
+		.title:before,
+		.title:after {
+			transform: skew(20deg);
+		}
+	}
 }
 .wrapp-title {
 	text-align: center;
@@ -254,7 +263,7 @@ h3 {
 		color: #fff;
 		text-align: center;
 		position: relative;
-		padding: 18px 62px 18px;
+		padding: 16px 54px 16px;
 
 		-webkit-backface-visibility: hidden;
 		-moz-backface-visibility:    hidden;
@@ -269,6 +278,9 @@ h3 {
 		span {
 			position: relative;
 			z-index: 1;
+			letter-spacing: .6px;
+			display: block;
+			line-height: 1;
 		}
 		&:before,
 		&:after  {
@@ -279,8 +291,8 @@ h3 {
 			background-color: #000;
 			width: 100%;
 			left: 0;
-			transform: skew(20deg);
-			border-radius: 10px;
+			transform: skew(23deg);
+			border-radius: 8px 12px 8px 12px;
 
 			top: 0;
 			z-index: 0;
@@ -291,7 +303,7 @@ h3 {
 
 .offers-wrapp {
 	@extend %clearfix;
-	margin-top: 50px;
+	margin-top: 57px;
 }
 .ofr-item {
 	width: 25%;
@@ -326,7 +338,7 @@ h3 {
 .section-products {
 	background: url(../img/pattern.jpg) center top repeat;
 	border-top: 2px solid #000;
-	padding-bottom: 150px;
+	padding-bottom: 114px;
 	h3 {
 		margin-top: 25px;
 	}
@@ -340,7 +352,7 @@ h3 {
 	justify-content: space-between;
 	transition: transform .3s ease, opacity .25s ease;
 	z-index: 10;
-	margin: 50px 0 0 0;
+	margin: 48px 0 0 0;
 	@include breakpoint("large") {
 		padding-right: 30px;
 	}
@@ -352,6 +364,7 @@ h3 {
 
 .close-filter {
 	display: inline-block;
+	margin-left: 10px;
 	i {
 		display: block;
 	}
@@ -391,7 +404,7 @@ h3 {
 
 		padding-left: 18px;
 		height: 40px;
-		line-height: 40px;
+		line-height: 38px;
 		cursor: pointer;
 		&:after {
 			content: '';
@@ -452,7 +465,7 @@ h3 {
 .products-wrapp {
 	margin-left: -15px;
 	margin-right: -15px;
-	margin-top: 50px;
+	margin-top: 47px;
 	@include breakpoint("phablet") {
 		display: flex;
 		align-items: stretch;
@@ -477,7 +490,7 @@ h3 {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 20px;
+		margin-top: 19px;
 	}
 }
 
@@ -489,7 +502,7 @@ h3 {
 	
 	background-color: #f8f8f8;
 	border: 1px solid #c8c8c8;
-	border-radius: 10px;
+	border-radius: 5px;
 	padding-top: 12px;
 	padding-bottom: 104px;
 
@@ -508,7 +521,7 @@ h3 {
 		font-family: $font1;
 		font-size: 14px;
 		font-weight: 400;
-		margin-top: 18px;
+		margin-top: 16px;
 	}
 }
 .price {
@@ -533,7 +546,7 @@ h3 {
 	font-weight: 700;
 
 	position: absolute;
-	bottom: 30px;
+	bottom: 28px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
