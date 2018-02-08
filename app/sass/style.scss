@@ -135,6 +135,7 @@ p {
 
 
 .section-contacts {
+	padding-top: 50px;
 	.contacts__item {
 		color: #000;
 	}
@@ -205,4 +206,78 @@ p {
 #map-canvas2 {
 	width: 100%;
 	height: 345px;
+}
+
+
+
+
+
+
+
+
+.specialoffers {
+	background: url(../img/offer.jpg) center top no-repeat;
+	background-size: cover;
+	padding-bottom: 90px;
+}
+.wrapp-title {
+	text-align: center;
+	.title {
+		display: inline-block;
+		color: #fff;
+		text-align: center;
+		position: relative;
+		padding: 18px 62px 18px;
+		transform: translate(0, -50%);
+		span {
+			position: relative;
+			z-index: 1;
+		}
+		&:before,
+		&:after  {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 100%;
+			background-color: #000;
+			width: 100%;
+			left: 0;
+			transform: skew(20deg);
+			border-radius: 10px;
+
+			top: 0;
+			z-index: 0;
+		}
+	}
+}
+
+
+.offers-wrapp {
+	@extend %clearfix;
+	margin-top: 50px;
+}
+.ofr-item {
+	width: 25%;
+	float: left;
+	text-align: center;
+	&__img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+	}
+
+	&__txt {
+		padding-left: 20px;
+
+		color: #ffffff;
+		font-family: $font1;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 18px;
+		strong {
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
 }
